@@ -2,7 +2,7 @@ name: "CI/CD Pipeline"
 on:
   push:
     branches-ignore:
-      - l10n_develop
+      - main
       - gh-pages
     paths-ignore:
       - '*.md'

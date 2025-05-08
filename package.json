@@ -157,7 +157,7 @@
     "jsonwebtoken": "0.4.0",
     "jssha": "^3.3.1",
     "juicy-chat-bot": "^0.8.0",
-    "fast-xml-parser": "5.2.2",
+    "libxmljs": "^1.0.11",
     "marsdb": "^0.6.11",
     "median": "^0.0.2",
     "morgan": "^1.10.0",
@@ -266,7 +266,7 @@
     "typescript": "~5.3.3"
   },
   "engines": {
-    "node": "20 - 22"
+    "node": "2>=16.0.0 <17.0.0"
   },
   "os": [
     "win32",
