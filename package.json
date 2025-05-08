@@ -50,6 +50,7 @@
   "scripts": {
     "build:frontend": "cd frontend && npm run build",
     "build:server": "tsc",
+    "build": "npm run build:frontend && npm run build:server",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "frisby": "nyc --report-dir=./build/reports/coverage/api-tests jest --silent --runInBand --forceExit",
@@ -218,7 +219,7 @@
     "@types/mocha": "^8.2.3",
     "@types/morgan": "^1.9.9",
     "@types/multer": "^1.4.12",
-    "@types/node": "^20.17.25",
+    "@types/node": "^20.17.46",
     "@types/on-finished": "^2.3.4",
     "@types/pdfkit": "^0.10.6",
     "@types/portscanner": "^2.1.4",

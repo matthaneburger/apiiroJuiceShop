@@ -8,6 +8,7 @@ import fs from 'node:fs'
 import vm from 'node:vm'
 import path from 'node:path'
 import yaml from 'js-yaml'
+import libxml from 'libxmljs'
 import unzipper from 'unzipper'
 import { type NextFunction, type Request, type Response } from 'express'
 
