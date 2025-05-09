@@ -34,4 +34,4 @@ jobs:
     - name: Run Snyk SAST Scan
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      run: snyk code test --severity-threshold=critical || echo "Critical issues found, but continuing..."
+      run: snyk code test || echo "Issues found, but continuing..."
