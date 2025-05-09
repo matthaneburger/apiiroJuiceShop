@@ -26,12 +26,10 @@ jobs:
     - name: Install Snyk
       run: npm install -g snyk
 
-    - name: Run Snyk SCA Scan
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      run: snyk test --severity-threshold=critical || echo "Critical issues found, but continuing..."
+    - name: Install Snyk Delta
+      run: npm i -g snyk-delta
 
-    - name: Run Snyk SAST Scan
+    - name: Run Snyk SCA Scan w/ delta
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      run: snyk code test || echo "Issues found, but continuing..."
+      run: snyk test --json --print-deps | snyk-delta --baselineOrg 884d2ae0-651f-4927-aed5-abd795e75eff --baselineProject 11f074c2-ef6d-4642-8ef2-e241332d413a
