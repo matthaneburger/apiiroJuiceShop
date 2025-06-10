@@ -1,8 +1,6 @@
 name: Snyk Security Scan
 
-on:
-  push:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   build-and-scan:
